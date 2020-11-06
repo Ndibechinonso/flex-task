@@ -88,20 +88,24 @@ h1 {
 .content {
   display: flex;
   flex-direction: row;
-  width: 70%;
+  max-width: 700px;
+  width: 100%;
   justify-content: space-around;
-  align-items: center;
+  margin: auto;
+  text-align: center;
+}
+
+.content .device {
+  align-self: center;
+  justify-self: center;
   margin: auto;
 }
 
-.device1 {
-  width: 15%;
-}
 .button2 {
   background-color: rgb(65, 105, 225);
   border: 1px solid rgb(65, 105, 225);
   border-radius: 5px;
-  width: 150px;
+  max-width: 150px;
   padding: 12px;
   color: white;
   font-family: "Poppins", sans-serif;
@@ -111,15 +115,6 @@ h1 {
 }
 img {
   object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-.device2 {
-  width: 15%;
-}
-
-.device3 {
-  width: 15%;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -135,7 +130,6 @@ img {
   .menu div:nth-child(3) {
     width: 30%;
     position: relative;
-    /* margin: 30px; */
   }
 
   .button {
@@ -150,7 +144,7 @@ img {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
   .button {
     background-color: red;
     position: relative;
@@ -175,27 +169,36 @@ img {
   .button2 {
     background-color: red;
     border: 1px solid red;
+    max-width: 150px;
+    width: 100%;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+  }
+  .device1 {
+    width: 50%;
+  }
+  .device2 {
+    width: 50%;
+  }
+
+  .device3 {
+    width: 50%;
+  }
+  .content p {
+    margin: auto;
   }
 }
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 500px) {
   .content {
     justify-content: space-between;
   }
 
-  .device1 {
-    width: 10%;
-  }
-
-  .device2 {
-    width: 15%;
-  }
-
-  .device3 {
-    width: 15%;
-  }
-
   .button2 {
-    width: 75px;
+    max-width: 100px;
+    width: 100%;
   }
 }
